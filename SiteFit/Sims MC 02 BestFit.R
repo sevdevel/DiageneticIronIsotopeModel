@@ -227,19 +227,3 @@ sim.info$N.out <- 2
 # simulation.list: stores output of simulation
 
 save(sim.info, simulation.list, file = paste(sim.info$name,".Rdata",sep="")) 
-
-#=============================================================================
-# Send email to say you are finished
-#=============================================================================
-
-if (is.local){
-  
-  require(mailR)
-  
-  send.mail(from = "rsebsebr@gmail.com",
-            to = c("sebastiv@ucr.edu"),
-            subject = paste("I think ", sim.info$code,"is done!"),
-            body = "Hello, I think the code you were running has finished. Best come check what mistakes you made ...",
-            smtp = list(host.name = "smtp.gmail.com", port = 465, user.name = "rsebsebr@gmail.com", passwd = "Rmail888", ssl = TRUE),
-            authenticate = TRUE,  send = TRUE)
-}
