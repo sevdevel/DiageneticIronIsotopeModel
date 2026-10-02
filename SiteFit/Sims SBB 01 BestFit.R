@@ -851,15 +851,3 @@ if (!is.local){
     unlink(paste(BASENAME,i))
   }
 }
- 
-if (is.local){
-  
-  require(mailR)
-  
-  send.mail(from = "rsebsebr@gmail.com",
-            to = c("sebastiv@ucr.edu"),
-            subject = paste("I think ", BASENAME, "is done!"),
-            body = "Hello, I think the code you were running has finished. Best come check what mistakes you made ...",
-            smtp = list(host.name = "smtp.gmail.com", port = 465, user.name = "rsebsebr@gmail.com", passwd = "Rmail888", ssl = TRUE),
-            authenticate = TRUE,  send = TRUE)
-}
