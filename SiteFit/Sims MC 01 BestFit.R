@@ -7,23 +7,6 @@
 is.local <- TRUE
 
 #=============================================================================
-# Compile packages for current node
-
-if (!is.local){
-  
-  install.packages("../packages/gsw_1.0-5.tar.gz", repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/oce_1.2-0.tar.gz", repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/rootSolve_1.8.2.tar.gz",repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/deSolve_1.27.1.tar.gz",repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/shape_1.4.4.tar.gz",repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/ReacTran_1.4.3.1.tar.gz",repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/AquaEnv_1.0-4.tar.gz",repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/seacarb_3.2.12.tar.gz",repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  install.packages("../packages/marelac_2.1.10.tar.gz",repos=NULL, type="source", lib="/theia/home/brussel/102/vsc10244/MCrun/")
-  
-}
-
-#=============================================================================
 # Source file containing model function
 
 if (!is.local){source("Model_CSFe_Feiso_HPCversion_v01.R")}
